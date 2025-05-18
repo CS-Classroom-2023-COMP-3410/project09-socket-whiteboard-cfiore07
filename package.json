@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "concurrently": "^9.1.2",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1",
+    "vite": "^6.3.5"
+  },
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "server": "node server.js",
+    "start": "concurrently \"npm run server\" \"npm run dev\"",
+    "setup": "mkdir -p public/js && cp ./node_modules/socket.io-client/dist/socket.io.js public/js/socket.io.js"
+  }
+}
